@@ -46,9 +46,9 @@
 /* Crimson radial showroom spotlight */
 .bg-crimson-spotlight {
   background: radial-gradient(
-    circle at 72% 45%,
+    circle at 50% 35%,
     rgba(225, 29, 46, 0.2) 0%,
-    rgba(225, 29, 46, 0.06) 36%,
+    rgba(225, 29, 46, 0.06) 38%,
     rgba(9, 9, 11, 0) 70%
   );
 }

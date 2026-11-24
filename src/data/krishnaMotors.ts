@@ -29,7 +29,6 @@ export const BUSINESS_INFO = {
   },
   assets: {
     logo: '/assets/aistudio/IMG-20261124-WA0007_250417fe.jpg',
-    heroPoster: '/assets/aistudio/IMG-20261124-WA0008_66d7b67b.jpg',
   },
 } as const;
 

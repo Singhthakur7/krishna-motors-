@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Rajdhani", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-carbon: #09090b;
+  --color-charcoal: #121216;
+  --color-crimson: #e11d2e;
+  --color-silver: #e4e4e7;
+  --color-champagne: #d4af37;
+}
+
+@layer base {
+  html {
+    background-color: #09090b;
+    color: #e4e4e7;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #e4e4e7;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Subtle luxury carbon-mesh micro-texture */
+.bg-carbon-mesh {
+  background-color: #09090b;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.015) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.015) 25%, transparent 25%);
+  background-size: 24px 24px, 12px 12px, 12px 12px;
+}
+
+/* Crimson radial showroom spotlight */
+.bg-crimson-spotlight {
+  background: radial-gradient(
+    circle at 72% 45%,
+    rgba(225, 29, 46, 0.2) 0%,
+    rgba(225, 29, 46, 0.06) 36%,
+    rgba(9, 9, 11, 0) 70%
+  );
+}
+
+/* Infinite smooth marquee animation */
+@keyframes km-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-km-marquee {
+  display: flex;
+  width: max-content;
+  animation: km-marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-km-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-km-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark-themed Google Maps iframe filter */
+.km-dark-map {
+  filter: grayscale(92%) invert(92%) contrast(94%) brightness(90%) hue-rotate(180deg);
+}
